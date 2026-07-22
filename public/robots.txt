@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://salernotrucking.com/sitemap-index.xml
