@@ -1,3 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';import PageHero from '../components/PageHero.astro';
----<Layout title="About | Salerno Trucking" description="Family-owned Salerno Trucking has delivered professional mixer truck capacity and concrete delivery services since 2009."><PageHero eyebrow="Our Story" title="Built on Relationships. Driven by Responsibility." text="Since 2009, Salerno Trucking has built its reputation by showing up professionally, communicating clearly, and treating every customer's success as our responsibility." image="/images/fleet/sunset-truck.webp"/><section class="section"><div class="container split"><div class="reveal"><p class="eyebrow">Who We Are</p><h2>A Family Business Built for Long-Term Partnerships</h2></div><div class="reveal"><p class="lead">We provide mixer truck capacity and concrete delivery services across the United States.</p><p>Our work supports ready-mix producers that need dependable equipment and operators, and placement contractors who need reliable delivery and clear communication.</p></div></div></section><section class="section muted"><div class="container"><div class="values">{[['Respect','For every partner, operator, customer, and jobsite.'],['Integrity','Honest communication and dependable follow-through.'],['Stewardship','Care for the equipment and relationships entrusted to us.'],['Responsibility','Ownership of our performance and its impact.']].map(v=><article class="reveal"><h3>{v[0]}</h3><p>{v[1]}</p></article>)}</div></div></section><section class="image-feature reverse"><div class="feature-image about-image"></div><div class="feature-copy reveal"><p class="eyebrow">Our Vision</p><h2>To Be the Industry's Most Trusted Capacity Partner</h2><p class="lead">Known nationwide for professional representation, clear communication, and dependable service.</p></div></section><section class="cta"><div class="container centered"><h2>Put Our Experience to Work.</h2><a class="btn light-btn" href="/partner-with-us">Partner With Us</a></div></section></Layout>
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const values = [
+  ['Respect', 'For every partner, operator, customer, and jobsite.'],
+  ['Integrity', 'Honest communication and dependable follow-through.'],
+  ['Stewardship', 'Care for the equipment and relationships entrusted to us.'],
+  ['Responsibility', 'Ownership of our performance and its impact.'],
+];
+---
+
+<Layout
+  title="About | Salerno Trucking"
+  description="Salerno Trucking provides professional mixer truck capacity and concrete delivery services built around dependable relationships."
+>
+  <PageHero
+    eyebrow="Our Story"
+    title="Built on Relationships. Driven by Responsibility."
+    text="Salerno Trucking is building its reputation by showing up professionally, communicating clearly, and treating every customer's success as our responsibility."
+    image="/images/fleet/sunset-truck.webp"
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <p class="eyebrow">Who We Are</p>
+        <h2>A Business Built for Long-Term Partnerships</h2>
+      </div>
+      <div class="reveal">
+        <p class="lead">We provide mixer truck capacity and concrete delivery services across the United States.</p>
+        <p>Our work supports ready-mix producers that need dependable equipment and operators, and placement contractors who need reliable delivery and clear communication.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted">
+    <div class="container">
+      <div class="values">
+        {values.map(([title, text]) => (
+          <article class="reveal">
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="image-feature reverse">
+    <div class="feature-image about-image" role="img" aria-label="Salerno Trucking mixer truck"></div>
+    <div class="feature-copy reveal">
+      <p class="eyebrow">Our Vision</p>
+      <h2>To Be the Industry's Most Trusted Capacity Partner</h2>
+      <p class="lead">Known nationwide for professional representation, clear communication, and dependable service.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container centered">
+      <h2>Put Our Experience to Work.</h2>
+      <a class="btn light-btn" href="/partner-with-us/">Partner With Us</a>
+    </div>
+  </section>
+</Layout>

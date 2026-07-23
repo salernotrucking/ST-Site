@@ -1,3 +1,16 @@
 ---
-const { eyebrow, title, text, image='/images/fleet/crane-project.webp' }=Astro.props;
----<section class="page-hero" style={`--page-image:url('${image}')`}><div class="container narrow reveal"><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p class="lead">{text}</p></div></section>
+const {
+  eyebrow,
+  title,
+  text,
+  image = '/images/fleet/crane-project.webp',
+} = Astro.props;
+---
+
+<section class="page-hero" style={`--page-image: url('${image}')`}>
+  <div class="container narrow reveal">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="lead">{text}</p>
+  </div>
+</section>
