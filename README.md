@@ -1,17 +1,25 @@
-# Salerno Trucking Website — Version 2
+# Salerno Trucking Website — Version 3 Final
 
-Complete Astro site using Salerno Trucking's real branding and photography.
+Production website built with Astro for Salerno Trucking.
 
-## Upload
-Upload the contents of this folder to the root of the GitHub `ST-Site` repository, replacing existing files. Netlify will rebuild automatically.
+## Local development
 
-## Required final contact edits
-Search the project for these placeholders and replace them with the real business phone number:
-- `(000) 000-0000`
-- `+10000000000`
+```bash
+npm install
+npm run dev
+```
 
-The email is currently `info@salernotrucking.com`. Update it if a different address should receive inquiries.
+## Production build
 
-## Netlify settings
+```bash
+npm run build
+```
+
+Netlify settings are included in `netlify.toml`:
+
 - Build command: `npm run build`
 - Publish directory: `dist`
+
+## Deployment through GitHub
+
+Upload the contents of this folder to the root of the GitHub repository connected to Netlify. Commit the changes; Netlify will automatically build and publish the site.
