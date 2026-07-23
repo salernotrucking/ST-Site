@@ -1,3 +1,92 @@
 ---
-import Layout from '../layouts/Layout.astro';import PageHero from '../components/PageHero.astro';
----<Layout title="Partner With Us | Salerno Trucking" description="Contact Salerno Trucking about mixer truck fleet capacity or concrete delivery."><PageHero eyebrow="Start a Conversation" title="Let's Build Something Strong Together." text="Tell us what your operation or project needs. Our team will follow up to discuss capacity, scheduling, and the right service approach." image="/images/fleet/pump-project.webp"/><section class="section"><div class="container contact"><div class="reveal"><p class="eyebrow">Contact Salerno Trucking</p><h2>Professional Service Starts With Clear Communication.</h2><p class="lead">Discuss fleet support, concrete delivery, project requirements, or a long-term partnership.</p><a href="tel:+15625532989"><strong>Phone</strong><br/>(562) 553-2989</a><br/><br/><a href="mailto:dispatch@salernotrucking.com"><strong>Email</strong><br/>dispatch@salernotrucking.com</a></div><form class="form reveal" name="partner-inquiry" method="POST" data-netlify="true" action="/thank-you"><input type="hidden" name="form-name" value="partner-inquiry"/><div class="row"><label>Name<input required name="name"/></label><label>Company<input name="company"/></label></div><div class="row"><label>Phone<input required name="phone" type="tel"/></label><label>Email<input required name="email" type="email"/></label></div><label>Project Type<select required name="project-type"><option value="">Select one</option><option>Ready-Mix Producer Fleet Capacity</option><option>Long-Term Contract</option><option>Seasonal Support</option><option>Other</option></select></label><label>Message<textarea required name="message" rows="6"></textarea></label><button class="btn" type="submit">Submit Inquiry</button></form></div></section></Layout>
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout
+  title="Partner With Us | Salerno Trucking"
+  description="Partner with Salerno Trucking for dependable mixer truck fleet capacity, experienced operators, and nationwide mobilization."
+>
+  <PageHero
+    eyebrow="For Ready-Mix Producers"
+    title="Dependable Fleet Capacity When You Need It."
+    text="Tell us what your operation needs. We will follow up to discuss capacity, scheduling, mobilization, and the right service approach for your production goals."
+    image="/images/fleet/pump-project.webp"
+  />
+
+  <section class="section">
+    <div class="container contact">
+      <div class="reveal">
+        <p class="eyebrow">Partner With Salerno Trucking</p>
+        <h2>Increase Capacity Without Compromising Service.</h2>
+        <p class="lead">
+          We provide reliable mixer trucks and experienced operators for long-term contracts,
+          seasonal demand, and peak-production support. We can mobilize anywhere in the United States.
+        </p>
+        <a href="tel:+15625532989"><strong>Phone</strong><br />(562) 553-2989</a>
+        <br /><br />
+        <a href="mailto:dispatch@salernotrucking.com"><strong>Dispatch Email</strong><br />dispatch@salernotrucking.com</a>
+      </div>
+
+      <form
+        class="form reveal"
+        name="partner-inquiry"
+        method="POST"
+        data-netlify="true"
+        action="/thank-you"
+      >
+        <input type="hidden" name="form-name" value="partner-inquiry" />
+        <div class="row">
+          <label>
+            Name
+            <input required name="name" />
+          </label>
+          <label>
+            Company
+            <input required name="company" />
+          </label>
+        </div>
+        <div class="row">
+          <label>
+            Phone
+            <input required name="phone" type="tel" />
+          </label>
+          <label>
+            Email
+            <input required name="email" type="email" />
+          </label>
+        </div>
+        <div class="row">
+          <label>
+            Primary Service Area
+            <input name="service-area" placeholder="City, state, or region" />
+          </label>
+          <label>
+            Estimated Start Date
+            <input name="start-date" type="date" />
+          </label>
+        </div>
+        <label>
+          Support Needed
+          <select required name="support-needed">
+            <option value="">Select one</option>
+            <option>Long-Term Fleet Capacity</option>
+            <option>Seasonal Support</option>
+            <option>Peak-Demand Support</option>
+            <option>Project-Specific Mobilization</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Number of Trucks Needed
+          <input name="truck-count" type="number" min="1" />
+        </label>
+        <label>
+          Tell Us About Your Needs
+          <textarea required name="message" rows="6"></textarea>
+        </label>
+        <button class="btn" type="submit">Submit Partnership Inquiry</button>
+      </form>
+    </div>
+  </section>
+</Layout>
