@@ -1,3 +1,88 @@
 ---
 import Layout from '../layouts/Layout.astro';
----<Layout title="Thank You | Salerno Trucking" description="Thank you for contacting Salerno Trucking."><section class="page-hero thanks"><div class="container narrow centered"><p class="eyebrow">Message Received</p><h1>Thank You.</h1><p class="lead">A member of the Salerno Trucking team will follow up with you.</p><a class="btn" href="/">Return Home</a></div></section></Layout>
+---
+
+<Layout
+  title="Thank You | Salerno Trucking"
+  description="Thank you for contacting Salerno Trucking."
+>
+  <section class="thank-you-page">
+    <div class="thank-you-content">
+
+      <img
+        src="/images/logo/salerno%20trucking%202.png"
+        alt="Salerno Trucking"
+        class="thank-you-logo"
+      />
+
+      <h1>THANK YOU.</h1>
+
+      <p>
+        Your request has been received.<br />
+        A member of the Salerno Trucking team will follow up with you.
+      </p>
+
+      <a href="/" class="thank-you-button">RETURN HOME</a>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .thank-you-page {
+    min-height: calc(100vh - 80px);
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .thank-you-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .thank-you-logo {
+    display: block;
+    width: min(600px, 90%);
+    height: auto;
+    margin: 0 auto 40px;
+  }
+
+  .thank-you-content h1 {
+    color: #fff;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    margin: 0 0 24px;
+    text-transform: uppercase;
+  }
+
+  .thank-you-content p {
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0 auto 36px;
+  }
+
+  .thank-you-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #c92a2a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: 4px;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .thank-you-button:hover {
+    background: #a91f1f;
+    transform: translateY(-2px);
+  }
+</style>
